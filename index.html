@@ -82,117 +82,84 @@
     <!--content-top-->
     <div class="content-top">
       <div class="content-top1">
-      	<div
-      	  v-for="item in list"
-      	  class="col-sm-4 grid-top"
-      	>
-      		<div class="top-grid">
-      			<i
-      			  class="glyphicon"
-      			  v-bind:class="item.btnIcon"
-      			>
-      			</i>
-      			<h3>{{ item.title }}</h3>
-      			<p>{{ item.description }}</p>
-      		</div>
-      		<i class="arrow"></i>
-      		<i class="arrow2"></i>
-      	</div>
+        <div v-for="item in list" class="col-sm-4 grid-top">
+          <div class="top-grid">
+            <i class="glyphicon" v-bind:class="item.btnIcon">
+            </i>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+          <i class="arrow"></i>
+          <i class="arrow2"></i>
+        </div>
         <div class="clearfix"> </div>
       </div>
     </div>
     <!--//content-top-->
-
   </div>
+
+  <!-- 关于开始 -->
   <div class="content-middle" id="about">
     <div class="container">
       <div class="content-mid">
-        <h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using </h3>
+        <h3>{{ title }}</h3>
         <label> </label>
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words</p>
+        <p>{{ description }}</p>
       </div>
       <div class="content-mid2">
-        <div class="col-sm-4 content-mid3">
-          <img src="images/ab.jpg" alt="" class="img-responsive">
-          <h5>It is a long established fact</h5>
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+        <div class="col-sm-4 content-mid3" v-for="item in list">
+          <img :src="item.imgSrc" :alt="item.title" class="img-responsive">
+          <h5>{{ item.title }}</h5>
+          <p>{{ item.description }}</p>
         </div>
-        <div class="col-sm-4 content-mid3">
-          <img src="images/ab1.jpg" alt="" class="img-responsive">
-          <h5>It is a long established fact</h5>
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-        </div>
-        <div class="col-sm-4 content-mid3">
-          <img src="images/ab2.jpg" alt="" class="img-responsive">
-          <h5>It is a long established fact</h5>
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-        </div>
-        <div class="clearfix"> </div>
+        <div class="clearfix"></div>
       </div>
     </div>
   </div>
-  <!---->
+  <!-- 关于结束 -->
+
+  <!-- 服务开始 -->
   <div class="content-bottom" id="services">
     <div class="container">
       <div class="services-top ">
-        <h2>Services</h2>
+        <h2>{{ title }}</h2>
         <label></label>
-        <p>Mauris malesuada mi sit amet quam euismod auctor quis quis urna. Cras a maximus ex. Vestibulum vitae vestibulum lectus, at maximus libero.</p>
+        <p>{{ description }}</p>
       </div>
       <div class="us-choose">
-        <div class="col-md-6 why-choose">
-          <div class="  ser-grid ">
-            <i class=" glyphicon glyphicon-pencil"> </i>
+        <div class="col-md-6 why-choose" v-for="item in li1">
+          <div class="ser-grid">
+            <i class="glyphicon" v-bind:class="item.btnIcon">
+            </i>
           </div>
-          <div class="ser-top ">
-            <h5>Beautiful &amp; Enjoyable Designs</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-          </div>
-          <div class="clearfix"> </div>
-        </div>
-        <div class="col-md-6 why-choose">
-          <div class=" ser-grid">
-            <i class="glyphicon glyphicon-user"> </i>
-          </div>
-          <div class="ser-top ">
-            <h5>Beautiful &amp; Enjoyable Designs</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+          <div class="ser-top">
+            <h5>{{ item.title }}</h5>
+            <p>{{ item.description }}</p>
           </div>
           <div class="clearfix"> </div>
         </div>
         <div class="clearfix"> </div>
       </div>
       <div class="us-choose">
-        <div class="col-md-6 why-choose">
-          <div class="  ser-grid ">
-            <i class="glyphicon glyphicon-file"> </i>
+        <div class="col-md-6 why-choose" v-for="item in li2">
+          <div class="ser-grid">
+            <i class="glyphicon" v-bind:class="item.btnIcon">
+            </i>
           </div>
-          <div class="ser-top ">
-            <h5>Beautiful &amp; Enjoyable Designs</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-          </div>
-          <div class="clearfix"> </div>
-        </div>
-        <div class="col-md-6 why-choose">
-          <div class=" ser-grid">
-            <i class="glyphicon glyphicon-eye-open"> </i>
-          </div>
-          <div class="ser-top ">
-            <h5>Beautiful &amp; Enjoyable Designs</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+          <div class="ser-top">
+            <h5>{{ item.title }}</h5>
+            <p>{{ item.description }}</p>
           </div>
           <div class="clearfix"> </div>
         </div>
-        <div class="clearfix"> </div>
       </div>
+      <div class="clearfix"> </div>
     </div>
   </div>
-  <div class="copyrights">Collect from
-    <a href="http://www.cssmoban.com/">手机网站模板</a>
-  </div>
+  <!-- 服务结束 -->
+
   <!--gallery-starts-->
   <div class="gallery" id="gallery">
-
     <div class="gallery-top ">
       <h3>Our Gallery</h3>
       <label> </label>
@@ -247,9 +214,9 @@
         <div class="clearfix"> </div>
       </div>
     </div>
-
   </div>
   <!--gallery-end-->
+
   <!--features-starts-->
   <div class="features">
     <div class="container">
