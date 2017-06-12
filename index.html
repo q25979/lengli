@@ -162,46 +162,46 @@
       <div class="gallery-grids">
         <div class="col-sm-3 gallery-left">
           <div class="g-1">
-            <a rel="title" class="b-link-stripe b-animate-go  thickbox" href="images/pi.jpg">
-              <img src="images/pi.jpg" alt="" />
+            <a rel="title" class="b-link-stripe b-animate-go  thickbox" :href="img1">
+              <img :src="img1" alt="" />
             </a>
           </div>
           <div class="g-2">
-            <a rel="title" class="b-link-stripe b-animate-go  thickbox" href="images/pi2.jpg">
-              <img src="images/pi2.jpg" alt="" />
+            <a rel="title" class="b-link-stripe b-animate-go  thickbox" :href="img2">
+              <img :src="img2" alt="" />
             </a>
           </div>
         </div>
         <div class="col-sm-6  gallery-left1">
-          <a rel="title" class="b-link-stripe b-animate-go  thickbox" href="images/pi1.jpg">
-            <img src="images/pi1.jpg" alt="" />
+          <a rel="title" class="b-link-stripe b-animate-go  thickbox" :href="img3">
+            <img :src="img3" alt="" />
           </a>
           <div class="g-5">
             <div class="col-sm-6 g-3">
-              <a rel="title" class="b-link-stripe b-animate-go  thickbox" href="images/pi4.jpg">
-                <img src="images/pi4.jpg" alt="" />
+              <a rel="title" class="b-link-stripe b-animate-go  thickbox" :href="img4">
+                <img :src="img4" alt="" />
               </a>
             </div>
             <div class="col-sm-6 g-4">
-              <a rel="title" class="b-link-stripe b-animate-go  thickbox" href="images/pi5.jpg">
-                <img src="images/pi5.jpg" alt="" />
+              <a rel="title" class="b-link-stripe b-animate-go  thickbox" :href="img5">
+                <img :src="img5" alt="" />
               </a>
             </div>
             <div class="clearfix"></div>
           </div>
-          <a rel="title" class="b-link-stripe b-animate-go  thickbox" href="images/pi3.jpg">
-            <img src="images/pi3.jpg" alt="" />
+          <a rel="title" class="b-link-stripe b-animate-go  thickbox" :href="img6">
+            <img :src="img6" alt="" />
           </a>
         </div>
         <div class="col-sm-3  gallery-left2">
           <div class="g-6">
-            <a rel="title" class="b-link-stripe b-animate-go  thickbox" href="images/pi6.jpg">
-              <img src="images/pi6.jpg" alt="" />
+            <a rel="title" class="b-link-stripe b-animate-go  thickbox" :href="img7">
+              <img :src="img7" alt="" />
             </a>
           </div>
           <div class="g-7">
-            <a rel="title" class="b-link-stripe b-animate-go  thickbox" href="images/pi7.jpg">
-              <img src="images/pi7.jpg" alt="" />
+            <a rel="title" class="b-link-stripe b-animate-go  thickbox" :href="img8">
+              <img :src="img8" alt="" />
             </a>
           </div>
         </div>
@@ -212,138 +212,30 @@
   <!--gallery-end-->
 
   <!--features-starts-->
-  <div class="features">
+  <div class="features" id="features">
     <div class="container">
-      <div class="features-top ">
-        <h3>Features</h3>
+      <div class="features-top">
+        <h3>{{ title }}</h3>
         <label></label>
-        <p>Mauris malesuada mi sit amet quam euismod auctor quis quis urna. Cras a maximus ex. Vestibulum vitae vestibulum lectus, at maximus libero.</p>
+        <p>{{ description }}</p>
       </div>
-      <div class="features-bottom">
+      <div class="features-bottom margin-bottom-20" v-for="(item, index) in bigLi">
         <div class="col-md-6 festure-left">
           <div class="f-left">
-            <img class="img-responsive" src="images/fe.jpg" alt="" />
+            <img class="img-responsive" :src="item.src" :alt="item.description">
           </div>
           <div class="f-right">
             <ul>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Curabitur vitae nisi ut eros</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Donec sagittis interdum tellus</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>In neque arcu vulputate vitae</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Cum sociis natoque penatibus</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Vestibulum congue turpis ac</a>
+              <li v-for="description in item.smallLi">
+                <a href="javascript:">
+                  <i class="glyphicon glyphicon-ok"></i>
+                  {{ description.content }}
+                </a>
               </li>
             </ul>
           </div>
-          <div class="clearfix"></div>
         </div>
-        <div class="col-md-6 festure-left">
-          <div class="f-left">
-            <img class="img-responsive" src="images/fe1.jpg" alt="" />
-          </div>
-          <div class="f-right">
-            <ul>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Curabitur vitae nisi ut eros</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Donec sagittis interdum tellus</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>In neque arcu vulputate vitae</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Cum sociis natoque penatibus</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Vestibulum congue turpis ac</a>
-              </li>
-            </ul>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-        <div class="clearfix"></div>
-      </div>
-      <div class="features-bottom">
-        <div class="col-md-6 festure-left">
-          <div class="f-left">
-            <img class="img-responsive" src="images/fe2.jpg" alt="" />
-          </div>
-          <div class="f-right">
-            <ul>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Curabitur vitae nisi ut eros</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Donec sagittis interdum tellus</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>In neque arcu vulputate vitae</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Cum sociis natoque penatibus</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Vestibulum congue turpis ac</a>
-              </li>
-            </ul>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-        <div class="col-md-6 festure-left">
-          <div class="f-left">
-            <img class="img-responsive" src="images/fe3.jpg" alt="" />
-          </div>
-          <div class="f-right">
-            <ul>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Curabitur vitae nisi ut eros</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Donec sagittis interdum tellus</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>In neque arcu vulputate vitae</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Cum sociis natoque penatibus</a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="glyphicon glyphicon-ok"></i>Vestibulum congue turpis ac</a>
-              </li>
-            </ul>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-        <div class="clearfix"></div>
+        <div v-if="index == 1" class="clearfix"></div>
       </div>
     </div>
   </div>
@@ -354,46 +246,16 @@
     <div class="container">
       <div class="team-main">
         <div class="team-top">
-          <h3>Our Team</h3>
+          <h3>{{ title }}</h3>
           <label> </label>
         </div>
         <ul class="ch-grid">
-          <li>
-            <a href="#">
-              <div class="ch-item ch-img-1">
+          <li v-for="item in list">
+            <a href="javascript:">
+              <div class="ch-item" v-bind:style="{background: item.src}">
                 <div class="ch-info">
-                  <h3>Agriculture</h3>
-                  <p>by Daniel Nyari</p>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="ch-item ch-img-2">
-                <div class="ch-info">
-                  <h3>Agriculture</h3>
-                  <p>by Daniel Nyari</p>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="ch-item ch-img-3">
-                <div class="ch-info">
-                  <h3>Agriculture</h3>
-                  <p>by Daniel Nyari </p>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="ch-item ch-img-4">
-                <div class="ch-info">
-                  <h3>Agriculture</h3>
-                  <p>by Daniel Nyari</p>
+                  <h3>{{ item.name }}</h3>
+                  <p>{{ item.description }}</p>
                 </div>
               </div>
             </a>
@@ -403,111 +265,71 @@
       </div>
     </div>
   </div>
-
   <!--//team-->
+
+  <!-- 联系我们 -->
   <div class="contact" id="contact">
     <div class="container">
       <div class="contact-top">
-        <h3>Contact</h3>
+        <h3>{{ title }}</h3>
         <label></label>
-        <p>Mauris malesuada mi sit amet quam euismod auctor quis quis urna. Cras a maximus ex. Vestibulum vitae vestibulum lectus, at maximus libero.</p>
+        <p>{{ description }}</p>
 
       </div>
       <div class="col-md-8 contact-form">
         <form>
-          <input type="text" placeholder="Name">
-          <input type="text" placeholder="E-mail">
-          <input type="text" placeholder="Phone">
+          <input name="name" type="text" placeholder="名字">
+          <input name="email" type="text" placeholder="E-mail">
+          <input name="tel" type="text" placeholder="电话">
 
-          <textarea placeholder="Message"></textarea>
-          <input type="submit" value="SEND">
+          <textarea name="msg" placeholder="信息"></textarea>
+          <input type="submit" value="发送">
         </form>
 
       </div>
       <div class="col-md-4 contact-para">
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
-        <div class="address-more">
-          <h4>Address</h4>
+        <p>{{ content }}</p>
+        <div class="address-more" v-for="item in list">
+          <h4>{{ title }}</h4>
           <p>
-            <b>The company name</b>
+            <b>{{ description }}</b>
           </p>
-          <p>Lorem ipsum dolor,</p>
-          <p>Glasglow Dr 40 Fe 72. </p>
-        </div>
-        <div class="address-more">
-          <h4>Address1</h4>
-          <p>
-            <b>The company name</b>
-          </p>
-          <p>Lorem ipsum dolor,</p>
-          <p>Glasglow Dr 40 Fe 72. </p>
+          <p>{{ content }}</p>
         </div>
       </div>
     </div>
-  </div>
-  <!--footer-->
-  <div class="footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <div class="col-sm-8 footer-menu">
-          <ul>
-            <li>
-              <a href="index.html" class="scroll">Home</a>
-            </li>
-            <li>
-              <a href="#about" class="scroll">About</a>
-            </li>
-            <li>
-              <a href="#services" class="scroll">Services</a>
-            </li>
-            <li>
-              <a href="#gallery" class="scroll">Gallery</a>
-            </li>
-            <li>
-              <a href="#team" class="scroll">Team </a>
-            </li>
-            <li>
-              <a href="#contact" class="scroll">Contact </a>
-            </li>
-          </ul>
+    <!--footer-->
+    <div class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <div class="col-sm-8 footer-menu">
+            <ul>
+              <li v-for="footNavItem in footNavLi">
+                <a :href="footNavItem.aHref" class="scroll">
+                  {{ footNavItem.content }}
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-4 footer-top1">
+            <ul class="social">
+              <li v-for="footFriendItem in footFriendLi">
+                <a href="javascript:">
+                  <i :class="footFriendItem.classIcon"> </i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="clearfix"> </div>
         </div>
-        <div class="col-sm-4 footer-top1">
-          <ul class="social">
-            <li>
-              <a href="#">
-                <i> </i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="twitter"> </i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="linked"> </i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="dribble"> </i>
-              </a>
-            </li>
-          </ul>
+        <div class="footer-top2">
+          <p>版权 &copy 2017 冷里XXX公司 保留所有权</p>
         </div>
-        <div class="clearfix"> </div>
-      </div>
-      <div class="footer-top2">
-        <p>Copyright &copy; 2015.Company name All rights reserved.More Templates
-          <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from
-          <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
-        </p>
-      </div>
 
-    </div>
-    <script type="text/javascript">
-    $(document).ready(function() {
-      /*
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function() {
+        /*
     var defaults = {
         containerID: 'toTop', // fading element id
       containerHoverID: 'toTopHover', // fading element hover id
@@ -516,18 +338,18 @@
       };
     */
 
-      $().UItoTop({
-        easingType: 'easeOutQuart'
+        $().UItoTop({
+          easingType: 'easeOutQuart'
+        });
+
       });
-
-    });
-    </script>
-    <a href="#" id="toTop" style="display: block;">
-      <span id="toTopHover" style="opacity: 1;"> </span>
-    </a>
+      </script>
+      <a href="#" id="toTop" style="display: block;">
+        <span id="toTopHover" style="opacity: 1;"> </span>
+      </a>
 
 
-  </div>
+    </div>
 </body>
 
 </html>

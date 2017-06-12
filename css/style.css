@@ -493,22 +493,6 @@ p {
     transition: all 0.4s ease-in-out;
 }
 
-.ch-img-1 {
-    background-image: url(../images/te.jpg);
-}
-
-.ch-img-2 {
-    background-image: url(../images/te1.jpg);
-}
-
-.ch-img-3 {
-    background-image: url(../images/te2.jpg);
-}
-
-.ch-img-4 {
-    background-image: url(../images/te3.jpg);
-}
-
 .ch-info {
     position: absolute;
     width: 100%;
