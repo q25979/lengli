@@ -94,4 +94,12 @@ $(function() {
 			}]
 		}
 	})
+
+	// 产品
+	new Vue({
+		el: "#gallery",
+		data: {
+			title: "我们的产品"
+		}
+	})
 });

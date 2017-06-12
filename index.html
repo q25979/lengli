@@ -25,12 +25,6 @@
   <!---->
   <script src="js/jquery.chocolat.js"></script>
   <link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
-  <!--light-box-files -->
-  <script type="text/javascript" charset="utf-8">
-  $(function() {
-    $('.gallery-grids a').Chocolat();
-  });
-  </script>
   <!--vue-->
   <script src="js/vue.min.js"></script>
   <script src="js/dataChange.js"></script>
@@ -161,7 +155,7 @@
   <!--gallery-starts-->
   <div class="gallery" id="gallery">
     <div class="gallery-top ">
-      <h3>Our Gallery</h3>
+      <h3>{{ title }}</h3>
       <label> </label>
     </div>
     <div class="gallery-bottom">
@@ -514,13 +508,13 @@
     <script type="text/javascript">
     $(document).ready(function() {
       /*
-		var defaults = {
-				containerID: 'toTop', // fading element id
-			containerHoverID: 'toTopHover', // fading element hover id
-			scrollSpeed: 1200,
-			easingType: 'linear' 
-			};
-	  */
+    var defaults = {
+        containerID: 'toTop', // fading element id
+      containerHoverID: 'toTopHover', // fading element hover id
+      scrollSpeed: 1200,
+      easingType: 'linear' 
+      };
+    */
 
       $().UItoTop({
         easingType: 'easeOutQuart'
